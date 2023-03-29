@@ -1,3 +1,4 @@
+-- Active: 1680128703522@@127.0.0.1@3306
 -- Conecte o arquivo pratica-aprofundamento-sql.db com a extensão MySQL e ative a conexão aqui
 
 -- Deletar tabela
@@ -43,3 +44,34 @@ VALUES
 SELECT * FROM pokemons;
 
 -- Práticas
+SELECT * FROM pokemons WHERE speed > 60;
+
+SELECT * FROM pokemons WHERE attack >= 60 AND special_attack >= 60;
+
+SELECT * FROM pokemons WHERE name LIKE "%saur";
+
+SELECT * FROM pokemons;
+
+SELECT AVG(hp) FROM pokemons;
+
+SELECT COUNT(*) FROM pokemons;
+
+SELECT COUNT(*) AS numeroLinhasTabela FROM pokemons;
+
+SELECT AVG(hp) AS mediaSimples FROM pokemons;
+
+SELECT * FROM pokemons ORDER BY defense DESC;
+
+SELECT COUNT(*) AS qtdPokemons, "type" FROM pokemons GROUP BY "type";
+
+SELECT * FROM pokemons LIMIT 3 OFFSET 4;
+
+SELECT * FROM pokemons WHERE "type" LIKE "%fire" OR "%grass";
+
+SELECT * FROM pokemons ORDER BY attack ASC;
+
+SELECT * FROM pokemons LIMIT 3 OFFSET 2;
+
+SELECT * FROM pokemons WHERE "type" LIKE "%fire" OR "%grass" ORDER BY attack ASC LIMIT 3 OFFSET 2;
+
+
